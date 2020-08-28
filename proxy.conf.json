@@ -1,0 +1,9 @@
+{
+  "/api/*": {
+    "target": "https://zapomni.lastick.ru",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "proxyTimeout": 10000
+  }
+}

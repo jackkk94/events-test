@@ -1,0 +1,8 @@
+
+<ngb-carousel *ngIf="model && model.length>0" #carousel (slide)="onSlide($event)" [interval]="false">
+        
+        <ng-template ngbSlide *ngFor="let event of model;let i=index" [id]="i">
+          <slider-item [model]="event"></slider-item>
+        </ng-template>
+       
+</ngb-carousel>

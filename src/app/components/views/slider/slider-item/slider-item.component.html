@@ -1,0 +1,17 @@
+<div class="picsum-img-wrapper">
+  <img [src]="baseUrl+model.poster.path" alt="" />
+</div>
+<div class="carousel-caption">
+  <h3 class="event-title">{{ model.name.ru }}</h3>
+  <p class="event-shedule"><b>Расписание:</b></p>
+  <div
+    *ngIf="model.dateArray && model.dateArray.length > 0"
+    class="event-shedule-date"
+  >
+    <p *ngFor="let date of model.dateArray">
+      {{ date | date:'dd.LL.yy H:mm'}}
+    </p>
+  </div>
+
+  <div class="btn btn-info" (click)="openModal(model)">Подробнее</div>
+</div>
